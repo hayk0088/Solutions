@@ -1,0 +1,9 @@
+def fibbonaci(index):
+    if index == 1:
+        return 0
+    if index == 2:
+        return 1
+    return fibbonaci(index-1) + fibbonaci(index-2)
+
+index = int(input("Enter a number: "))
+print(fibbonaci(index))
