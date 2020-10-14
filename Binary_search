@@ -1,3 +1,5 @@
+#Solution №1
+
 def binary_search(start,end,sorted_numbers,num):
     middle = (start + end) // 2 
     middle_1=sorted_numbers[middle]
@@ -9,3 +11,16 @@ def binary_search(start,end,sorted_numbers,num):
         else:
             return binary_search(middle + 1,end,sorted_numbers,num)
     return False
+
+
+#Solution №2
+
+def searching(num,arr):
+    if len(arr) >= 1:
+        if num > arr[len(arr)//2] and num != arr[len(arr)//2]:
+            return searching(num,arr[len(arr)//2+1:])
+        elif num < arr[len(arr)//2]:
+           return searching(num,arr[:len(arr)//2])
+        else:
+            return "Yes"
+    return "No"
